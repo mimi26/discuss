@@ -7,7 +7,7 @@ defmodule Discuss.Topic do
   end
 
   @doc false
-  def changeset(struct, params) do
+  def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:title])
     |> validate_required([:title])
